@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <title>Task Manager</title> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="javascript.js"></script>
+
+</head> 
+<body onload="displayTasksOnLoad()"> 
+<div class="container-fluid">
+<div class="row">
+    <div class="col-12" id="mainDiv" >
+<div>
+            
+<h2>TO DO LIST</h2>
+
+
+  <input type="checkbox" name="selectAll" id="selectAll" value="sellectAll" onclick="CheckSelectAllChbx(this)"> Sellect All Tasks<br>
+  <input type="checkbox" name="showAll" id="showAll" value="showAll" checked onclick="CheckShowAllChbx(this)"><span id="showAllSpan"> Show Done Tasks</span><br>
+  <label for="name" id="name">Current Tasks List()</label>
+  </div>
+    <div>
+        <table id="tableTasks" border="1">
+            <tr>
+                <th>Done</th>
+                <th id="th2">Task Subject</th>
+                <th d="th3">Remove Task</th>
+                <th d="th4">Edite Task</th>
+            </tr>
+        </table>
+    </div>
+        <button name="myBtn11" class="myButton">Clear Task List</button><br/><br/>
+      <button id="show" class="myButton">New Task</button><br/>
+      <div id="newTaskDiv">
+      <input name="newTaskSubj" id="subj" type="text" placeholder="Task Subject"><br/>
+      <textarea id="taskBody" rows="4" cols="70">
+      </textarea> <br/>
+      <button id="hide" onclick="createTask(); return false;" class="myButton">Add Task</button>
+      </div>
+   
+
+  <!-- The Modal begining-->
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+   
+<!-- The Modal end-->
+    </div>
+  </div>
+  </div>
+</body> 
+</html>
